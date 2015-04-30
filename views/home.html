@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<form>
+			<label>
+				<span>Name</span>
+				<input type="text" ng-model="msg.name">
+			<label>
+				<span>Message</span>
+				<input type="text" ng-model="msg.msg">
+			</label>
+			<button ng-click="send(msg)">Send</button>
+		</form>
+	</div>
+	<div class="row-fluid">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Name</th>
+					<th>Message</th>
+				</tr>
+			<tbody>
+				<tr ng-repeat="m in msgs">
+					<td>{{m.time}}</td>
+					<td>{{m.name}}</td>
+					<td>{{m.msg}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{{msgs | json}}
