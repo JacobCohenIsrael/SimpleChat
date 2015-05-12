@@ -6,7 +6,7 @@ function($scope)
 {
 		console.log('HomeController');
 		$scope.msgs = [];
-		$scope.socket = io.connect("http://127.0.0.1:8080");
+		$scope.socket = io.connect("http://jacob.chat.devx.rushcore.com:8080");
 		
 		$scope.socket.on("broadcast", function(data){
 			$scope.$apply(function()
